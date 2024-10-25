@@ -27,6 +27,8 @@ export class ItemController {
 
             if (!item) {
               return  response.status(401).json('Item not found');
+              console.log('Not found');
+              
             }
 
           return  response.status(200).json(item)
