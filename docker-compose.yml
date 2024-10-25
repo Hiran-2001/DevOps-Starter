@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+      - MONGO_URI=mongodb+srv://hiran:Hiran2001@devopscluster.ft0cn.mongodb.net/PracticeDB?retryWrites=true&w=majority&appName=DevOpsCluster
+ 
+volumes:
+  mongodb_data:
