@@ -7,4 +7,4 @@ router.get('/', ItemController.getItems);
 router.get('/:id',ItemController.getSingleItem)
 router.post('/', ItemController.createItem);
 
-export default router;
+export default router; 
